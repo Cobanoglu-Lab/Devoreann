@@ -98,7 +98,7 @@ def read_config():
     """Set user-defined global properties.
     """
     global batch_size, num_classes, num_filters, dropout_dim, dense_neurons
-    global b_eval_advanced, pool_size, kernel_size, IMG_SIZE, epochs
+    global b_eval_advanced, pool_size, kernel_size, IMG_SIZE, epochs, img_cols, img_rows
 
     config = configparser.ConfigParser()
     config.read('config.ini')
@@ -117,6 +117,7 @@ def read_config():
     pool_size = tuple(map(int, _pool_size.split(',')))
     kernel_size = tuple(map(int, _kernel_size.split(',')))
 
+    img_rows, img_cols = IMG_SIZE, IMG_SIZE
 
 def load_data():
     """Load data from pickle files.
@@ -339,18 +340,10 @@ def set_input_layer():
 
     input_image2 = cv2.imread("blood1.png")
 
-    if input_id == 0:
-        input_image2 = cv2.imread("blood1.png")
-    elif input_id == 1:
-        input_image2 = cv2.imread("inflammatory1.png")
-    elif input_id == 2:
-        input_image2 = cv2.imread("necrosis1.png")
-    elif input_id == 3:
-        input_image2 = cv2.imread("stroma1.png")
-    elif input_id == 4:
-        input_image2 = cv2.imread("tumor1.png")
-    elif input_id == 5:
-        input_image2 = cv2.imread("normal1.png")
+    if input_id < num_classes - 1:
+        input_image2 = X[input_id]
+    else:
+        input_image2 = X[0]
 
     input_image2 = np.expand_dims(input_image2, axis=0)
 

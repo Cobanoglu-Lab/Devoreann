@@ -100,7 +100,6 @@ def save_data():
     pickle.dump(y_test, pickle_out)
     pickle_out.close()
 
-
 read_config()
 load_images()
 save_data()
