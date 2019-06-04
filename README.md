@@ -1,6 +1,8 @@
 # VR4DL <img src="https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/VR_DL_Data/Repo/vr_icon_.png" width="36.5">
  > VR4DL is a Deep Learning Development Environment in Virtual Reality. With this tool **anyone** can create fully functional deep learning models that solve real-world classification problems.
 
+
+Runs as a standalone Oculus Rift application.
  
 ## Built With
 * Oculus Rift API
@@ -28,6 +30,27 @@
  image_size = 96
  categories = Tumor, Normal
  num_datapoints = 7000
+ ```
+ 
+ ## Custom Usage
+*This guide covers a use case for custom patch data.*
+1. Create a directory with folders corresponding to each class/category name.
+*EX: Z:\MyDir\Class1, Z:\Data\Class2, etc. "
+
+1. Specify properties in .config.
+ ```sh
+ image_size     = ...
+ categories     = Class1, Class2, ...
+ num_datapoints = ... # per class
+ num_testing    = ... # per class
+ num_classes    = ...
+ directory      = Z:\MyDir
+ ```
+
+2. Generate Training & Testing Data .pickle files:
+ ```sh
+ $ cd VR_DL_Data
+ $ python GenerateData
  ```
 
 ## Authors
