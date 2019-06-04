@@ -35,14 +35,14 @@ os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
 # Global Properties
-batch_size = 128
+batch_size = 32
 num_classes = 7
 epochs = 2
 num_filters = 32
 pool_size = (2, 2)
 kernel_size = (3, 3)
 dropout_dim = 0.5
-dense_neurons = 128
+dense_neurons = 32
 b_eval_advanced = False
 
 IMG_SIZE = 128
@@ -330,7 +330,6 @@ def plot_save_all(activations, max_index):
             print("Not Displayed: " + str(cnt))
 
 def set_input_layer():
-    #try:
     # Choose the input file:
     config = configparser.ConfigParser()
     config.read('input.ini')
@@ -348,8 +347,6 @@ def set_input_layer():
     input_image2 = np.expand_dims(input_image2, axis=0)
 
     return input_image2
-    #except ValueError:
-    #    print("Error in reading config file. ")
 # endregion
 
 main()
