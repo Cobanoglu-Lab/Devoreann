@@ -8,6 +8,28 @@
 * Unity
 * gRPC/Protocol Buffers
 
+## PCam Usage
+*This guide covers a use case for patches from the publicly available PatchCamelyon16 dataset.*
+
+1. Download patch data from [`github.com/basveeling/pcam:`](github.com/basveeling/pcam) 
+ ```sh
+ camelyonpatch_level_2_split_train_x.h5.gz
+ camelyonpatch_level_2_split_train_y.h5.gz
+ camelyonpatch_level_2_split_test_x.h5.gz
+ camelyonpatch_level_2_split_test_y.h5.gz
+ ```
+ 2. Generate Training & Testing Data .pickle files:
+ ```sh
+ $ cd VR_DL_Data
+ $ python GenerateData_pCam
+ ```
+ 3. Update .config:
+ ```sh
+ image_size = 96
+ categories = Tumor, Normal
+ num_datapoints = 7000
+ ```
+
 ## Authors
 * Kevin C. VanHorn
 * Meyer Zinn
