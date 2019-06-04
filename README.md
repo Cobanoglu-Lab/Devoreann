@@ -1,5 +1,7 @@
 # VR4DL
  > VR4DL is a Deep Learning Development Environment in Virtual Reality. With this tool **anyone** can create fully functional deep learning models that solve real-world classification problems.
+
+![alt text](https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/VR_DL_Data/Repo/vr_icon.png)
  
 ## Built With
 * Oculus Rift API
