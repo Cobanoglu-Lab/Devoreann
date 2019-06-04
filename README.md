@@ -1,3 +1,16 @@
 # VR4DL
-A Deep Learning Development Environment in Virtual Reality
-Virtual reality (VR) offers immersive visualization and intuitive interaction. We leverage VR to enable any biomedical professional to deploy a deep learning (DL) model for image classification. While DL models can be powerful tools for data analysis,they are also challenging to understand and develop. To make deep learning more accessible and intuitive, we have built a virtual reality-based DL development environment. Within our environment, the user can move tangible objects to construct a neural networkonly using their hands. Our software automatically translates these configurations into a trainable model and then reports its resultingaccuracy on a test dataset in real-time. Furthermore, we have enriched the virtual objects with visualizations of the model’scomponents such that users can achieve insight about the DL models that they are developing. With this approach, we bridge the gapbetween professionals in different fields of expertise while offering a novel perspective for model analysis and data interaction. We further suggest that techniques of development and visualization in deep learning can benefit by integrating virtual reality.
+ > VR4DL is a Deep Learning Development Environment in Virtual Reality. With this tool **anyone** can create fully functional deep learning models that solve real-world classification problems.
+ 
+## Built With
+* Oculus Rift API
+* Tensorflow/Keras
+* Unity
+* gRPC/Protocol Buffers
+
+## Authors
+* Kevin C. VanHorn
+* Meyer Zinn
+* Murat Can Çobanoğlu
+
+## Acknowledgments
+*Tumor images for classification were provided by Drs. Satwik Rajaram and Payal Kapur who is funded by the Kidney cancer SPORE grant (P50CA196516 ). The software is a derivative of work from the UT Southwestern hackathon, U-HACK Med 2018, and has continued development under the same Principal Investigator (Murat Can Çobanoğlu) and lead developer (Kevin VanHorn). The project was originally proposed by Murat Can Çobanoğlu, with the final code being submitted to the NCBI-Hackathons GitHub under the MIT License. We would like to thank hackathon contributors Xiaoxian Jing (Southern Methodist University), Siddharth Agarwal (University of Texas Arlington), and Michael Dannuzio (University of Texas at Dallas) for their initial work in design and development.*
