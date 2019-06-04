@@ -3,13 +3,27 @@
 
 ![Overview of VR Environment](https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/VR_DL_Data/Repo/Figure_Overview.png)
 
-Runs as a standalone Oculus Rift application. Executable: `VR_DL.exe`
+
  
 ## Built With
 * Oculus Rift API
 * Tensorflow/Keras
 * Unity
 * gRPC/Protocol Buffers
+
+## Instructions
+1. Configure Conda environment via `environment.yml:`
+
+```sh
+$ cd VR_DL_Data
+$ conda env create -f environment.yml
+$ conda activate VR_Env_GPU
+```
+2. Run gRPC server for model evaluation.
+```sh
+$ python server.py
+```
+2. Run as a standalone Oculus Rift application: `VR_DL.exe`
 
 ## PCam Usage
 *This guide covers a use case for patches from the publicly available PatchCamelyon16 dataset.*
