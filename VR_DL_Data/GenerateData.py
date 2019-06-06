@@ -1,3 +1,9 @@
+"""
+Copyright © 2019, University of Texas Southwestern Medical Center. All rights reserved.
+Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu
+Department: Lyda Hill Department of Bioinformatics
+"""
+
 from __future__ import print_function
 
 import numpy as np

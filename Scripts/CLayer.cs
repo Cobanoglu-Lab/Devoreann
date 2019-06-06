@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿/* Copyright © 2019, University of Texas Southwestern Medical Center. All rights reserved.
+ *  Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu
+ *  Department: Lyda Hill Department of Bioinformatics 
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
 
 /* Enum to represent the DL layers. */
 public enum CLayerType
