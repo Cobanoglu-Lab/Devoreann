@@ -71,14 +71,18 @@ $ python server.py
 ## Authors
 * Kevin C. VanHorn
 * Meyer Zinn
-* Murat Can Ã‡obanoÄŸlu
+* Murat Can Cobanoglu
 
 ## Acknowledgments
-*Tumor images for classification were provided by Drs. Satwik Rajaram and Payal Kapur who is funded by the Kidney cancer SPORE grant (P50CA196516 ). The software is a derivative of work from the UT Southwestern hackathon, U-HACK Med 2018, and has continued development under the same Principal Investigator (Murat Can Ã‡obanoÄŸlu) and lead developer (Kevin VanHorn). The project was originally proposed by Murat Can Ã‡obanoÄŸlu, with the final code being submitted to the NCBI-Hackathons GitHub under the MIT License. Hackathon was sponsored by BICF from funding provided by Cancer Prevention and Research Institute of Texas (RP150596). We would like to thank hackathon contributors Xiaoxian Jing (Southern Methodist University), Siddharth Agarwal (University of Texas Arlington), and Michael Dannuzio (University of Texas at Dallas) for their initial work in design and development.*
+*Tumor images for classification were provided by Drs. Satwik Rajaram and Payal Kapur who is funded by the Kidney cancer SPORE grant (P50CA196516 ). The software is a derivative of work from the UT Southwestern hackathon, U-HACK Med 2018, and has continued development under the same Principal Investigator (Murat Can Cobanoglu) and lead developer (Kevin VanHorn). The project was originally proposed by Murat Can Cobanoglu, with the final code being submitted to the NCBI-Hackathons GitHub under the MIT License. Hackathon was sponsored by BICF from funding provided by Cancer Prevention and Research Institute of Texas (RP150596). We would like to thank hackathon contributors Xiaoxian Jing (Southern Methodist University), Siddharth Agarwal (University of Texas Arlington), and Michael Dannuzio (University of Texas at Dallas) for their initial work in design and development.*
 
 ## Copyright
+<<<<<<< HEAD
 Copyright © 2019, University of Texas Southwestern Medical Center. All rights reserved.
 Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu
 Department: Lyda Hill Department of Bioinformatics.
 This software and any related documentation constitutes published and/or unpublished works and may contain valuable trade secrets and proprietary information belonging to The University of Texas Southwestern Medical Center (UT SOUTHWESTERN).  None of the foregoing material may be copied, duplicated or disclosed without the express written permission of UT SOUTHWESTERN.  IN NO EVENT SHALL UT SOUTHWESTERN BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF UT SOUTHWESTERN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  UT SOUTHWESTERN SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". UT SOUTHWESTERN HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
 This software contains copyrighted materials from Oculus, Unity Technologies, Keras, TensorFlow, gRPC, NumPy, Matplotlib, OpenCV, Pyprind, Nvidia CUDA, wiki.unity3d.com, PyCharm, Visual Studio Community, and Google. Corresponding terms and conditions apply.
+=======
+*Copyright Â© 2019, University of Texas Southwestern Medical Center. All rights reserved. Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu. Department: Lyda Hill Department of Bioinformatics.*
+>>>>>>> 6bca5c753cd90583a58b200bab1492c915494305
