@@ -1,7 +1,7 @@
-# Devoreann <img src="https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/VR_DL_Data/Repo/vr_icon.png" width="36">
+# Devoreann <img src="https://raw.githubusercontent.com/Cobanoglu-Lab/Devoreann/master/Application/VR_DL_Data/Repo/vr_icon.png" width="36">
  > Devoreann is a Deep Learning Development Environment in Virtual Reality. With this tool **anyone** can create fully functional deep learning models that solve real-world classification problems.
 
-![Overview of VR Environment](https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/VR_DL_Data/Repo/Figure_Overview.png)
+![Overview of VR Environment](https://raw.githubusercontent.com/Cobanoglu-Lab/Devoreann/master/Application/VR_DL_Data/Repo/Figure_Overview.png)
 
 
  
