@@ -1,8 +1,8 @@
-﻿/* Copyright © 2019, University of Texas Southwestern Medical Center. All rights reserved.
+﻿/* Copyright © 2020, University of Texas Southwestern Medical Center. All rights reserved.
  *  Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu
  *  Department: Lyda Hill Department of Bioinformatics 
  *  
- *  Copyright © 2019, University of Texas Southwestern Medical Center. All rights reserved.
+ *  Copyright © 2020, University of Texas Southwestern Medical Center. All rights reserved.
 Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu
 Department: Lyda Hill Department of Bioinformatics.
 This software and any related documentation constitutes published and/or unpublished works and may contain valuable trade secrets and proprietary information belonging to The University of Texas Southwestern Medical Center (UT SOUTHWESTERN).  None of the foregoing material may be copied, duplicated or disclosed without the express written permission of UT SOUTHWESTERN.  IN NO EVENT SHALL UT SOUTHWESTERN BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF UT SOUTHWESTERN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  UT SOUTHWESTERN SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". UT SOUTHWESTERN HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
@@ -30,6 +30,7 @@ public class EvaluateSimple : MonoBehaviour
     float accuracy;
 
     CLayerManager manager;
+    CModelHandler modelHandler;
 
     private bool bIsCalculating = false;
     private string conf;
@@ -40,7 +41,7 @@ public class EvaluateSimple : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
+    {   
         if (Application.isEditor)
         {
             conf = "C:/Users/VR_Demo/Desktop/VR_DevelopmentIDE/VR_DevelopmentIDE/VR_DL/Package/config.ini";
@@ -57,16 +58,18 @@ public class EvaluateSimple : MonoBehaviour
             IPEndPoint endPoint = socket.LocalEndPoint as IPEndPoint;
             localIP = endPoint.Address.ToString();
         }*/
+
         //string localIP = "172.18.227.36";
 
-        string localIP = "localhost";
-
+        string localIP = "198.215.56.140"; //"localhost";
         channel = new Channel(localIP + ":50051", ChannelCredentials.Insecure);
+
         Debug.Log("Created channel.");
         client = new Evaluator.Evaluator.EvaluatorClient(channel);
         Debug.Log("Created client.");
 
         manager = FindObjectOfType<CLayerManager>();
+        modelHandler = FindObjectOfType<CModelHandler>();
     }
 
     void SetConfValues()
@@ -103,6 +106,8 @@ public class EvaluateSimple : MonoBehaviour
 
     public IEnumerator Evaluate(CLayerType[] simpleLayers)
     {
+        if (modelHandler) modelHandler.ShowGPUs(true);
+
         EvaluateRequest req = new EvaluateRequest { };
         bool flat = false;
         for (int i = 0; i < simpleLayers.Length; i++)
@@ -138,11 +143,12 @@ public class EvaluateSimple : MonoBehaviour
             }
         }
         if (!flat) {
+            //req.Layers.Add(new Evaluator.Layer { Convolution = new Evaluator.ConvolutionLayer { Filters = 32 } });
             req.Layers.Add(new Evaluator.Layer { Flatten = new Evaluator.FlattenLayer { } });
         }
         bIsCalculating = true;
         using (var call = client.EvaluateAsync(req)) {
-            StartCoroutine(UpdateProgress());
+            //StartCoroutine(UpdateProgress());
             while (!call.ResponseAsync.IsCompleted) {
                 //accuracy = call.ResponseAsync.Result.Accuracy;
                 yield return new WaitForSeconds(0.5f);
@@ -150,6 +156,9 @@ public class EvaluateSimple : MonoBehaviour
             bIsCalculating = false;
             accuracy = call.ResponseAsync.Result.Accuracy;
             if (manager) manager.CompleteComputation(accuracy);
+
+            yield return new WaitForSeconds(0.5f);
+            if (modelHandler) modelHandler.Reset();
         }
     }
 
