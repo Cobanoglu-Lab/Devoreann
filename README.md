@@ -15,7 +15,6 @@
 1. Configure Conda environment via `environment.yml:`
 
 ```sh
-$ cd VR_DL_Data
 $ conda env create -f environment.yml
 $ conda activate VR_Env_GPU
 ```
