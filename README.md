@@ -21,9 +21,13 @@ $ conda activate VR_Env_GPU
 ```
 2. Run gRPC server for model evaluation.
 ```sh
-$ python server.py
+$ python Application/VR_DL_Data/Server/vrdl.py
 ```
-2. Run as a standalone Oculus Rift application: `VR_DL.exe`
+3. Run local client for receiving activation images.
+```sh
+$ python Application/VR_DL_Data/pyclient.py
+```
+4. Run standalone Oculus Rift application: `Application/VR_DL.exe`
 
 ## PCam Usage
 *This guide covers a use case for patches from the publicly available PatchCamelyon16 dataset.*
