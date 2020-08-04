@@ -11,42 +11,10 @@
 * Unity
 * gRPC/Protocol Buffers
 
-## Instructions
-1. Configure Conda environment via `environment.yml:`
+## Application
 
-```sh
-$ cd VR_DL_Data
-$ conda env create -f environment.yml
-$ conda activate VR_Env_GPU
-```
-2. Run gRPC server for model evaluation.
-```sh
-$ python server.py
-```
-2. Run as a standalone Oculus Rift application: `VR_DL.exe`
+Our application and instructions on how to run it are available [here.](https://365utsouthwestern-my.sharepoint.com/:u:/g/personal/kevin_vanhorn_utsouthwestern_edu/EZGivh0aCcVEmpQO-QWavpoB97blSUNFsSQMuy81NjPvjQ?e=AykTc4) 
 
-## PCam Usage
-*This guide covers a use case for patches from the publicly available PatchCamelyon16 dataset.*
-
-1. Download patch data from [`github.com/basveeling/pcam:`](github.com/basveeling/pcam) 
- ```sh
- camelyonpatch_level_2_split_train_x.h5.gz
- camelyonpatch_level_2_split_train_y.h5.gz
- camelyonpatch_level_2_split_test_x.h5.gz
- camelyonpatch_level_2_split_test_y.h5.gz
- ```
- 2. Generate Training & Testing Data .pickle files:
- ```sh
- $ cd VR_DL_Data
- $ python GenerateData_pCam
- ```
- 3. Update .config:
- ```sh
- image_size = 96
- categories = Tumor, Normal
- num_datapoints = 7000
- ```
- 
  ## Custom Usage
 *This guide covers a use case for custom patch data.*
 1. Create a directory with folders corresponding to each class/category name.
