@@ -1,7 +1,7 @@
-# Devoreann <img src="https://raw.githubusercontent.com/Cobanoglu-Lab/Devoreann/master/Application/VR_DL_Data/Repo/vr_icon.png" width="36">
+# Devoreann <img src="https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/Resources/vr_icon.png" width="36">
  > Devoreann is a Deep Learning Development Environment in Virtual Reality. With this tool **anyone** can create fully functional deep learning models that solve real-world classification problems.
 
-![Overview of VR Environment](https://raw.githubusercontent.com/Cobanoglu-Lab/Devoreann/master/Application/VR_DL_Data/Repo/Figure_Overview.png)
+![Overview of VR Environment](https://raw.githubusercontent.com/Cobanoglu-Lab/VR4DL/master/Resources/Figure_Overview.png)
 
 
  
@@ -15,18 +15,15 @@
 1. Configure Conda environment via `environment.yml:`
 
 ```sh
+$ cd VR_DL_Data
 $ conda env create -f environment.yml
 $ conda activate VR_Env_GPU
 ```
 2. Run gRPC server for model evaluation.
 ```sh
-$ python Application/VR_DL_Data/Server/vrdl.py
+$ python server.py
 ```
-3. Run local client for receiving activation images.
-```sh
-$ python Application/VR_DL_Data/pyclient.py
-```
-4. Run standalone Oculus Rift application: `Application/VR_DL.exe`
+2. Run as a standalone Oculus Rift application: `VR_DL.exe`
 
 ## PCam Usage
 *This guide covers a use case for patches from the publicly available PatchCamelyon16 dataset.*
@@ -81,7 +78,7 @@ $ python Application/VR_DL_Data/pyclient.py
 
 ## Copyright
 
-Copyright © 2020, University of Texas Southwestern Medical Center. All rights reserved.
+Copyright © 2019, University of Texas Southwestern Medical Center. All rights reserved.
 Contributors: Kevin VanHorn, Meyer Zinn, Murat Can Cobanoglu
 Department: Lyda Hill Department of Bioinformatics.
 This software and any related documentation constitutes published and/or unpublished works and may contain valuable trade secrets and proprietary information belonging to The University of Texas Southwestern Medical Center (UT SOUTHWESTERN).  None of the foregoing material may be copied, duplicated or disclosed without the express written permission of UT SOUTHWESTERN.  IN NO EVENT SHALL UT SOUTHWESTERN BE LIABLE TO ANY PARTY FOR DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, INCLUDING LOST PROFITS, ARISING OUT OF THE USE OF THIS SOFTWARE AND ITS DOCUMENTATION, EVEN IF UT SOUTHWESTERN HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  UT SOUTHWESTERN SPECIFICALLY DISCLAIMS ANY WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE SOFTWARE AND ACCOMPANYING DOCUMENTATION, IF ANY, PROVIDED HEREUNDER IS PROVIDED "AS IS". UT SOUTHWESTERN HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
