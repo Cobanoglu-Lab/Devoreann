@@ -12,10 +12,6 @@
 * Unity
 * gRPC/Protocol Buffers
 
-## Application
-
-Our application and instructions on how to run it are available [here.](https://365utsouthwestern-my.sharepoint.com/:u:/g/personal/kevin_vanhorn_utsouthwestern_edu/EZGivh0aCcVEmpQO-QWavpoB97blSUNFsSQMuy81NjPvjQ?e=AykTc4) 
-
  ## Custom Usage
 *This guide covers a use case for custom patch data.*
 1. Create a directory with folders corresponding to each class/category name.
